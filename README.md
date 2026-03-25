@@ -10,7 +10,7 @@
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](#testing-strategy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-<!-- TODO: Replace Ares-infenus with your GitHub username in the CI badge above -->
+[![Live API](https://img.shields.io/badge/API-Live%20on%20Render-46E3B7.svg)](https://penguin-ml-api-bmrr.onrender.com/docs)
 
 ---
 
@@ -343,18 +343,34 @@ make serve
 
 ## Usage
 
-### Quick Verification
+### Live API (Production)
 
-After starting the API, open your browser at **http://localhost:8000/docs** for the interactive Swagger UI.
+The API is deployed and publicly accessible:
+
+| Resource | URL |
+|----------|-----|
+| **Swagger UI** | https://penguin-ml-api-bmrr.onrender.com/docs |
+| **Health Check** | https://penguin-ml-api-bmrr.onrender.com/health |
+| **Predict** | https://penguin-ml-api-bmrr.onrender.com/predict |
+| **Model Info** | https://penguin-ml-api-bmrr.onrender.com/model/info |
+
+> **Note:** The free tier on Render sleeps after ~15 min of inactivity. The first request may take ~30-60s (cold start). Subsequent requests respond normally.
+
+### Quick Verification (Local)
+
+After starting the API locally, open your browser at **http://localhost:8000/docs** for the interactive Swagger UI.
 
 ### cURL Examples
 
 ```bash
+# Using the live API (or replace with http://localhost:8000 for local)
+API_URL=https://penguin-ml-api-bmrr.onrender.com
+
 # Health check
-curl http://localhost:8000/health
+curl $API_URL/health
 
 # Predict species
-curl -X POST http://localhost:8000/predict \
+curl -X POST $API_URL/predict \
   -H "Content-Type: application/json" \
   -d '{
     "bill_length_mm": 39.1,
@@ -366,7 +382,7 @@ curl -X POST http://localhost:8000/predict \
   }'
 
 # Model metadata
-curl http://localhost:8000/model/info
+curl $API_URL/model/info
 ```
 
 ### Python Example
@@ -375,7 +391,7 @@ curl http://localhost:8000/model/info
 import httpx
 
 response = httpx.post(
-    "http://localhost:8000/predict",
+    "https://penguin-ml-api-bmrr.onrender.com/predict",
     json={
         "bill_length_mm": 46.1,
         "bill_depth_mm": 13.2,
