@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Penguin Species Predictor API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "API REST for classifying penguin species from morphological measurements."
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Predict — Adelie (Torgersen, male)",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/predict",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bill_length_mm\": 39.1,\n  \"bill_depth_mm\": 18.7,\n  \"flipper_length_mm\": 181.0,\n  \"body_mass_g\": 3750.0,\n  \"sex\": \"male\",\n  \"island\": \"Torgersen\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Predict — Gentoo (Biscoe, female)",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/predict",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bill_length_mm\": 46.1,\n  \"bill_depth_mm\": 13.2,\n  \"flipper_length_mm\": 211.0,\n  \"body_mass_g\": 4500.0,\n  \"sex\": \"female\",\n  \"island\": \"Biscoe\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Predict — Chinstrap (Dream, female)",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/predict",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bill_length_mm\": 46.5,\n  \"bill_depth_mm\": 17.9,\n  \"flipper_length_mm\": 192.0,\n  \"body_mass_g\": 3500.0,\n  \"sex\": \"female\",\n  \"island\": \"Dream\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Model Info",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/model/info"
+      }
+    },
+    {
+      "name": "Predict — Invalid Input (out of range)",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/predict",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bill_length_mm\": 100.0,\n  \"bill_depth_mm\": 18.7,\n  \"flipper_length_mm\": 181.0,\n  \"body_mass_g\": 3750.0,\n  \"sex\": \"male\",\n  \"island\": \"Torgersen\"\n}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Training configuration for Penguin Species Classifier
+
+data:
+  test_size: 0.2
+  random_state: 42
+
+features:
+  numeric:
+    - bill_length_mm
+    - bill_depth_mm
+    - flipper_length_mm
+    - body_mass_g
+  categorical:
+    - sex
+    - island
+
+target: species
+
+model:
+  type: RandomForestClassifier
+  params:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 42
+
+output:
+  pipeline_path: model/pipeline.joblib
+  metadata_path: model/metadata.json
+  version: "1.0.0"
+
+thresholds:
+  min_accuracy: 0.95

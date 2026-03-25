@@ -1,0 +1,82 @@
+[
+  {
+    "prediction": "Adelie",
+    "probabilities": {
+      "Adelie": 1.0,
+      "Chinstrap": 0.0,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Adelie",
+    "probabilities": {
+      "Adelie": 0.9933,
+      "Chinstrap": 0.0067,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Adelie",
+    "probabilities": {
+      "Adelie": 1.0,
+      "Chinstrap": 0.0,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Adelie",
+    "probabilities": {
+      "Adelie": 1.0,
+      "Chinstrap": 0.0,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Chinstrap",
+    "probabilities": {
+      "Adelie": 0.0628,
+      "Chinstrap": 0.9355,
+      "Gentoo": 0.0017
+    }
+  },
+  {
+    "prediction": "Chinstrap",
+    "probabilities": {
+      "Adelie": 0.0638,
+      "Chinstrap": 0.9362,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Chinstrap",
+    "probabilities": {
+      "Adelie": 0.0169,
+      "Chinstrap": 0.9831,
+      "Gentoo": 0.0
+    }
+  },
+  {
+    "prediction": "Gentoo",
+    "probabilities": {
+      "Adelie": 0.0012,
+      "Chinstrap": 0.0002,
+      "Gentoo": 0.9986
+    }
+  },
+  {
+    "prediction": "Gentoo",
+    "probabilities": {
+      "Adelie": 0.0012,
+      "Chinstrap": 0.0002,
+      "Gentoo": 0.9986
+    }
+  },
+  {
+    "prediction": "Gentoo",
+    "probabilities": {
+      "Adelie": 0.0026,
+      "Chinstrap": 0.0001,
+      "Gentoo": 0.9974
+    }
+  }
+]

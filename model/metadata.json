@@ -1,0 +1,63 @@
+{
+  "model_version": "1.0.0",
+  "model_type": "RandomForestClassifier",
+  "training_date": "2026-03-25",
+  "accuracy": 1.0,
+  "classification_report": {
+    "Adelie": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 29.0
+    },
+    "Chinstrap": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14.0
+    },
+    "Gentoo": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 24.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 67.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 67.0
+    }
+  },
+  "features": [
+    "bill_length_mm",
+    "bill_depth_mm",
+    "flipper_length_mm",
+    "body_mass_g",
+    "sex",
+    "island"
+  ],
+  "target_classes": [
+    "Adelie",
+    "Chinstrap",
+    "Gentoo"
+  ],
+  "pipeline_sha256": "4c785fa3cc13348fc60780dabbc69f787fe65d0f0a3de5bc19a989885d1e770c",
+  "data_samples": 333,
+  "train_samples": 266,
+  "test_samples": 67,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "min_samples_split": 5,
+    "min_samples_leaf": 2,
+    "random_state": 42
+  }
+}
