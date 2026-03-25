@@ -2,7 +2,7 @@
 
 > Production-grade ML classification service deployed as a REST API with end-to-end MLOps best practices.
 
-[![CI](https://github.com/<tu-usuario>/penguin-ml-api/actions/workflows/ci.yml/badge.svg)](https://github.com/<tu-usuario>/penguin-ml-api/actions)
+[![CI](https://github.com/Ares-infenus/penguin-ml-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Ares-infenus/penguin-ml-api/actions)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5+-F7931E.svg)](https://scikit-learn.org/)
@@ -10,7 +10,7 @@
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](#testing-strategy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-<!-- TODO: Replace <tu-usuario> with your GitHub username in the CI badge above -->
+<!-- TODO: Replace Ares-infenus with your GitHub username in the CI badge above -->
 
 ---
 
@@ -277,7 +277,7 @@ sequenceDiagram
 
 ```powershell
 # Clone repository
-git clone https://github.com/<tu-usuario>/penguin-ml-api.git
+git clone https://github.com/Ares-infenus/penguin-ml-api.git
 cd penguin-ml-api
 
 # Create virtual environment
@@ -304,7 +304,7 @@ uvicorn app.main:app --reload --port 8000
 
 ```bash
 # Clone repository
-git clone https://github.com/<tu-usuario>/penguin-ml-api.git
+git clone https://github.com/Ares-infenus/penguin-ml-api.git
 cd penguin-ml-api
 
 # Create virtual environment
